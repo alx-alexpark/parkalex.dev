@@ -1,4 +1,6 @@
-# NextJS - Typescript - MDX - Blog
+# My personal website I guess? At least a starting point :)
+
+### NextJS - Typescript - MDX - Blog
 
 A Next.js starter for your next blog or personal site. Built with:
 
