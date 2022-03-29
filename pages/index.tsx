@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
-import styles from '../styles/Home.module.css';
+import styles from '/styles/Index.module.css';
 
 type IndexProps = {
   posts: PostType[];
