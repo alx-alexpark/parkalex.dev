@@ -25,6 +25,9 @@ export const About = (): JSX.Element => {
           Keyserver
         </a>
       </p>
+      <p>
+        Or <a href="/gpgkey.txt">download it directly</a>
+      </p>
       <code>
         gpg --keyserver keyserver.ubuntu.com --recv-keys 24a3b83fb26aa900
       </code>
