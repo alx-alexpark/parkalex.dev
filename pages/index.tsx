@@ -5,6 +5,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
+import styles from '../styles/Index.module.css';
 
 type IndexProps = {
   posts: PostType[];
@@ -13,7 +14,7 @@ type IndexProps = {
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout>
-      <h1>Alex Park</h1>
+      <h1 className={styles.alexpark}>Alex Park</h1>
       <p>Hopefully my personal website!</p>
       <h4>I am ...</h4>
       <ul className="list-disc pl-4 my-6">
