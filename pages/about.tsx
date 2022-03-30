@@ -20,14 +20,21 @@ export const About = (): JSX.Element => {
         </strong>
       </p>
       <p>
-        Pull it from a <a href="https://keyserver.ubuntu.com">Keyserver</a>
+        Pull it from a{' '}
+        <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0x24A3B83FB26AA900">
+          Keyserver
+        </a>
       </p>
       <code>
         gpg --keyserver keyserver.ubuntu.com --recv-keys 24a3b83fb26aa900
       </code>
-      <br /> <br />
       <p>
         Or <a href="/gpgkey.txt">download it directly</a>
+      </p>
+      <p>
+        <b>
+          For maximum security, verify key integrity over multiple keyserversy
+        </b>
       </p>
       <code>Email: public@funny-bunny.ninja</code>
     </Layout>
