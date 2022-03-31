@@ -37,3 +37,24 @@
     background-position: 150% center;
   }
 }
+
+.colorscontainer {
+  height: 100vh;
+}
+
+.blackbox {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.whitebox {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+}
+
+.coloredboxes {
+  height: 100vh;
+  width: 100vw;
+}

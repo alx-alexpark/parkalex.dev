@@ -1,3 +1,4 @@
+import { Flex } from '@chakra-ui/react';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -14,15 +15,15 @@ type IndexProps = {
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout>
-      <h1 className={styles.alexpark}>Alex Park</h1>
-      <p>Hopefully my personal website!</p>
-      <h4>I am ...</h4>
-      <ul className="list-disc pl-4 my-6">
-        <li>Programmer and Tech Nerd</li>
-        <li className="mt-2">Student</li>
-        <li className="mt-2">Gamer</li>
-        <li className="mt-2">Fedora Linux User</li>
-      </ul>
+      <Flex
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        className={styles.coloredboxes}
+      >
+        <div className={styles.blackbox}></div>
+        <div className={styles.whitebox}></div>
+      </Flex>
 
       {posts.map((post) => (
         <article key={post.slug} className="mt-12">
