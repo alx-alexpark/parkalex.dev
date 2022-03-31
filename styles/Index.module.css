@@ -1,6 +1,5 @@
 .alexpark {
-  font-size: 100px;
-  font-size: 12vmin;
+  font-size: 17vmin;
   font-weight: 700;
   color: transparent;
   letter-spacing: 0.2em;
@@ -46,12 +45,22 @@
   width: 100vw;
   height: 100vh;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .whitebox {
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .coloredboxes {
