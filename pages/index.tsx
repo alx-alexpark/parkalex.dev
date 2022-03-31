@@ -21,8 +21,12 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         justifyContent="center"
         className={styles.coloredboxes}
       >
-        <div className={styles.blackbox}></div>
-        <div className={styles.whitebox}></div>
+        <div className={styles.blackbox}>
+          <h1 className={styles.alexpark}>Alex</h1>
+        </div>
+        <div className={styles.whitebox}>
+          <h1 className={styles.alexpark}>Park</h1>
+        </div>
       </Flex>
 
       {posts.map((post) => (
