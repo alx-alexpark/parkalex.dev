@@ -1,8 +1,8 @@
 import React from 'react';
 import { MetaProps } from '../types/layout';
 import Head from './Head';
-import Navigation from './Navigation';
-import ThemeSwitch from './ThemeSwitch';
+// import Navigation from './Navigation';
+// import ThemeSwitch from './ThemeSwitch';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -16,19 +16,16 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
     <>
       <Head customMeta={customMeta} />
       <header>
-        <div className="max-w-5xl py-6 mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between">
-            <Navigation />
-            <ThemeSwitch />
+            {/* <Navigation />
+            <ThemeSwitch /> */}
           </div>
         </div>
       </header>
       <main>
         <div className="mx-auto">{children}</div>
       </main>
-      <footer className="py-8">
-        <div className="max-w-5xl mx-auto"></div>
-      </footer>
     </>
   );
 };
