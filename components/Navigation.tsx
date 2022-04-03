@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navigation = (): JSX.Element => {
   return (
-    <nav backgroundColor="black">
+    <nav>
       <Link href="/">
         <a className="text-gray-900 dark:text-white pr-6 py-4">Home</a>
       </Link>
