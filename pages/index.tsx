@@ -20,6 +20,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         alignItems="center"
         justifyContent="center"
         className={styles.coloredboxes}
+        padding="0px all"
       >
         <div className={styles.blackbox}>
           <h1 className={styles.alexpark}>Alex</h1>
@@ -31,15 +32,11 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
       <div className={styles.indexbody}>
         {posts.map((post) => (
-          <article key={post.slug} className="mt-12" color="white">
-            <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-              {format(parseISO(post.date), 'MMMM dd, yyyy')}
-            </p>
+          <article key={post.slug} className="mt-12">
+            <p className="">{format(parseISO(post.date), 'MMMM dd, yyyy')}</p>
             <h1 className="mb-2 text-xl">
               <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-                <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
-                  {post.title}
-                </a>
+                <a className="">{post.title}</a>
               </Link>
             </h1>
             <p className="mb-3">{post.description}</p>
