@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -21,6 +21,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         justifyContent="center"
         className={styles.coloredboxes}
         padding="0px all"
+        margin="0px all"
       >
         <div className={styles.blackbox}>
           <h1 className={styles.alexpark}>Alex</h1>
@@ -31,6 +32,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       </Flex>
 
       <div className={styles.indexbody}>
+        <Box className={styles.whoami}></Box>
         {posts.map((post) => (
           <article key={post.slug} className="mt-12">
             <p className="">{format(parseISO(post.date), 'MMMM dd, yyyy')}</p>

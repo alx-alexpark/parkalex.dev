@@ -73,3 +73,12 @@
 .indexbody {
   background-color: black;
 }
+
+.whoami {
+  padding: 5px all;
+  width: 60vw;
+  height: 10vh;
+  background-color: white;
+  margin-left: 10vw;
+}
+
