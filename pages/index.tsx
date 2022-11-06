@@ -1,4 +1,4 @@
-import { Flex, Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -15,40 +15,33 @@ type IndexProps = {
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout>
-      <Flex
-        flexDirection="row"
-        alignItems="center"
-        justifyContent="center"
-        className={styles.coloredboxes}
-        padding="0px all"
-        margin="0px all"
-      >
-        <div className={styles.blackbox}>
-          <h1 className={styles.alexpark}>Alex</h1>
-        </div>
-        <div className={styles.whitebox}>
-          <h1 className={styles.alexpark}>Park</h1>
-        </div>
-      </Flex>
-
       <div className={styles.indexbody}>
-        <Box className={styles.whoami}></Box>
-        {posts.map((post) => (
-          <article key={post.slug} className="mt-12">
-            <p className="">{format(parseISO(post.date), 'MMMM dd, yyyy')}</p>
-            <h1 className="mb-2 text-xl">
-              <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-                <a className="">{post.title}</a>
-              </Link>
-            </h1>
-            <p className="mb-3">{post.description}</p>
-            <p>
-              <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-                <a>Read More</a>
-              </Link>
-            </p>
-          </article>
-        ))}
+        <header className={styles.nameHeader}>
+          <div className={styles.nameHeaderRight}></div>
+          <h1 className={styles.nameHeaderTextWhite}>
+            Alex <span className={styles.nameHeaderTextBlack}>Park</span>
+          </h1>
+        </header>
+
+        <div className={styles.indexbody}>
+          <Box className={styles.whoami}></Box>
+          {posts.map((post) => (
+            <article key={post.slug} className="mt-12">
+              <p className="">{format(parseISO(post.date), 'MMMM dd, yyyy')}</p>
+              <h1 className="mb-2 text-xl">
+                <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+                  <a className="">{post.title}</a>
+                </Link>
+              </h1>
+              <p className="mb-3">{post.description}</p>
+              <p>
+                <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+                  <a>Read More</a>
+                </Link>
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </Layout>
   );

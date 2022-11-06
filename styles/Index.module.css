@@ -81,3 +81,37 @@
   background-color: white;
   margin-left: 10vw;
 }
+
+.nameHeader {
+  /* take up entirety of the screen */
+  height: 100vh;
+  width: 100vw;
+  
+  /* align the text in the middle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameHeaderRight {
+  /* take up the right half of the screen */
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  right: 0;
+  
+  background-color: white;
+}
+
+.nameHeaderTextWhite {
+  color: white;
+  font-size: 9em;
+  font-family: monospace;
+  
+  /* appear in front of the white div */
+  z-index: 1;
+}
+
+.nameHeaderTextBlack {
+  color: black;
+}
