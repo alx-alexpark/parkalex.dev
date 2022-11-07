@@ -7,13 +7,15 @@ import Layout from '../components/Layout';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
 import styles from '/styles/Index.module.css';
+import useWindowDimensions from '/utils/useWindowDimensions.ts';
 
 type IndexProps = {
   posts: PostType[];
 };
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
-  return (
+  let { height, width } = useWindowDimensions();
+  return width >= 600 ? (
     <Layout>
       <div className={styles.indexbody}>
         <header className={styles.nameHeader}>
@@ -24,7 +26,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         </header>
 
         <div className={styles.indexbody}>
-          <Box className={styles.whoami}></Box>
+          {/* <Box className={styles.whoami}></Box>
           {posts.map((post) => (
             <article key={post.slug} className="mt-12">
               <p className="">{format(parseISO(post.date), 'MMMM dd, yyyy')}</p>
@@ -40,11 +42,20 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 </Link>
               </p>
             </article>
-          ))}
+          ))} */}
+          <div className={styles.lowerSection}>
+            <div className={styles.whoami}>
+              <h3 className={styles.whoamiTextMain}>$ whoami</h3>
+              <p style={{fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em'}}>I am ...</p>
+              <p className={styles.whoamiTextItem}>※ A sussy baka</p>
+              <p className={styles.whoamiTextItem}>※ A red imposter</p>
+              <p className={styles.whoamiTextItem}>※ A amogus enjoyer</p>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
-  );
+  ) : <h1>Unfortunately, Phone is unsupported. My website is very WIP, and may be mobile compatable in the future :D</h1>;
 };
 
 export const getStaticProps: GetStaticProps = async () => {

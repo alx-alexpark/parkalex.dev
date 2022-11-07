@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
 .alexpark {
   font-size: 17vmin;
   font-weight: 700;
@@ -75,11 +77,9 @@
 }
 
 .whoami {
-  padding: 5px all;
-  width: 60vw;
-  height: 10vh;
+  max-width: 700px;
+  margin-right: 100px;
   background-color: white;
-  margin-left: 10vw;
 }
 
 .nameHeader {
@@ -106,7 +106,7 @@
 .nameHeaderTextWhite {
   color: white;
   font-size: 9em;
-  font-family: monospace;
+  font-family: 'JetBrains Mono', monospace;
   
   /* appear in front of the white div */
   z-index: 1;
@@ -114,4 +114,31 @@
 
 .nameHeaderTextBlack {
   color: black;
+}
+
+.lowerSection {
+  width: 100vw;
+  /* padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem; */
+  /* margin-top: 5rem; */
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5rem;
+  max-width: 90vw;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center; 
+  background: white;
+}
+
+.whoamiTextMain {
+  font-size: 5em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.whoamiTextItem {
+  font-size: 1.5em;
+  font-family: 'JetBrains Mono', monospace;
 }
