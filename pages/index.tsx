@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
 import styles from '/styles/Index.module.css';
-import useWindowDimensions from '/utils/useWindowDimensions.ts';
+import useWindowDimensions from '../utils/useWindowDimensions';
 
 type IndexProps = {
   posts: PostType[];
@@ -15,6 +15,9 @@ type IndexProps = {
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   let { height, width } = useWindowDimensions();
+  if (typeof width === 'undefined') {
+    return <h1>Unfortunately, Phone is unsupported. My website is very WIP, and may be mobile compatable in the future :D</h1>;
+  }
   return width >= 600 ? (
     <Layout>
       <div className={styles.indexbody}>
