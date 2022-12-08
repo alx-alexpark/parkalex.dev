@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { SimpleGrid, Box, Flex } from '@chakra-ui/react';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -46,6 +46,8 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               </p>
             </article>
           ))} */}
+          
+          <Flex flexDirection="row" justifyContent="center">
           <div className={styles.lowerSection}>
             <div className={styles.whoami}>
               <h3 className={styles.whoamiTextMain}>$ whoami</h3>
@@ -55,6 +57,11 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               <p className={styles.whoamiTextItem}>※ A amogus enjoyer</p>
             </div>
           </div>
+          <div className={styles.lowerSection} style={{width: "20vw", marginRight: "6rem"}}>
+
+          </div>
+        
+          </Flex>
         </div>
       </div>
     </Layout>
