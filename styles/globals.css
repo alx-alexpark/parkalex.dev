@@ -121,3 +121,9 @@ h4,
 li {
   font-family: 'Red Hat Mono', monospace;
 }
+
+html,
+body,
+head {
+  background-color: black;
+}
