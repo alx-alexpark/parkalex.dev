@@ -103,8 +103,7 @@
   background-color: white;
 }
 
-.nameHeaderTextWhite {
-  color: white;
+.nameHeaderText {
   font-size: 9em;
   font-family: 'JetBrains Mono', monospace;
   

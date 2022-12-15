@@ -21,12 +21,15 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   return width >= 600 ? (
     <Layout>
       <div className={styles.indexbody}>
-        <header className={styles.nameHeader}>
-          <div className={styles.nameHeaderRight}></div>
-          <h1 className={styles.nameHeaderTextWhite}>
-            Alex <span className={styles.nameHeaderTextBlack}>Park</span>
-          </h1>
-        </header>
+        <Flex flexDirection="column" style={{padding: '0px', height:'100vh', width:'100vw'}} flexDir="row">
+          <Flex style={{flex: '1', backgroundColor: 'black'}} alignItems="center" justifyContent="end">
+            <h1 className={styles.nameHeaderText} style={{color: 'white', paddingRight: '0.1em'}}>Alex</h1>
+          </Flex>
+          <Flex style={{flex: '1', backgroundColor: 'white'}} alignItems="center">
+            <h1 className={styles.nameHeaderText} style={{color: 'black', paddingLeft: '0.1em'}}>Park</h1>
+          </Flex>
+
+        </Flex>
 
         <div className={styles.indexbody}>
           {/* <Box className={styles.whoami}></Box>

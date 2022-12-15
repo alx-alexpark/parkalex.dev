@@ -1,15 +1,15 @@
+import { Flex } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 
 const Navigation = (): JSX.Element => {
   return (
     <nav>
-      <Link href="/">
-        <a className="text-gray-900 dark:text-white pr-6 py-4">Home</a>
-      </Link>
-      <Link href="/about">
-        <a className="text-gray-900 dark:text-white px-6 py-4">Contact</a>
-      </Link>
+      <Flex justifyContent="space-around" width="50vw" position="absolute" top="0" left="0" color="white" style={{fontFamily: 'JetBrains Mono', fontSize: '1.6em', paddingTop: '0.5em'}}>
+              <Link href="/">Home</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/projects">Projects</Link>
+      </Flex>
     </nav>
   );
 };
