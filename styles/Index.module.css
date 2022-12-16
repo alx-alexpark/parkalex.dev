@@ -132,6 +132,21 @@
   background: white;
 }
 
+.socialIcons {
+  /* padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem; */
+  /* margin-top: 5rem; */
+  margin-right: 2rem;
+  margin-left: 7rem;
+  margin-top: 5rem;
+  max-width: 45vw;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center; 
+}
+
 .whoamiTextMain {
   font-size: 5em;
   font-family: 'JetBrains Mono', monospace;
@@ -140,4 +155,18 @@
 .whoamiTextItem {
   font-size: 1.5em;
   font-family: 'JetBrains Mono', monospace;
+}
+
+
+.socialButton:hover {
+  animation: spin 0.25s linear infinite;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }

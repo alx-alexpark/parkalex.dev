@@ -1,13 +1,15 @@
-import { SimpleGrid, Box, Flex } from '@chakra-ui/react';
+import { SimpleGrid, Box, Flex, Grid } from '@chakra-ui/react';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import Layout from '../components/Layout';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
 import styles from '/styles/Index.module.css';
 import useWindowDimensions from '../utils/useWindowDimensions';
+import {SocialIcon} from 'react-social-icons';
 
 type IndexProps = {
   posts: PostType[];
@@ -54,15 +56,18 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           <div className={styles.lowerSection}>
             <div className={styles.whoami}>
               <h3 className={styles.whoamiTextMain}>$ whoami</h3>
-              <p style={{fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em'}}>I am ...</p>
-              <p className={styles.whoamiTextItem}>※ A High Schooler</p>
-              <p className={styles.whoamiTextItem}>※ A Developer</p>
-              <p className={styles.whoamiTextItem}>※ A Linux Enjoyer</p>
+              <p style={{fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em'}}>I am a ...</p>
+              <p className={styles.whoamiTextItem}>※ High schooler</p>
+              <p className={styles.whoamiTextItem}>※ Developer/CS Nerd</p>
+              <p className={styles.whoamiTextItem}>※ Linux Enjoyer</p>
             </div>
           </div>
-          <div className={styles.lowerSection} style={{width: "20vw", marginRight: "6rem"}}>
-
-          </div>
+          <Grid className={styles.socialIcons} style={{width: "20vw", marginRight: "6rem", gridTemplateColumns: "auto auto", rowGap: "5em", columnGap: "5em"}}>
+            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
+            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="me@parkalex.dev" network="email" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
+            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
+            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
+          </Grid>
         
           </Flex>
         </div>
