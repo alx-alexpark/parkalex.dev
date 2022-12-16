@@ -55,9 +55,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             <div className={styles.whoami}>
               <h3 className={styles.whoamiTextMain}>$ whoami</h3>
               <p style={{fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em'}}>I am ...</p>
-              <p className={styles.whoamiTextItem}>※ A sussy baka</p>
-              <p className={styles.whoamiTextItem}>※ A red imposter</p>
-              <p className={styles.whoamiTextItem}>※ A amogus enjoyer</p>
+              <p className={styles.whoamiTextItem}>※ A High Schooler</p>
+              <p className={styles.whoamiTextItem}>※ A Developer</p>
+              <p className={styles.whoamiTextItem}>※ A Linux Enjoyer</p>
             </div>
           </div>
           <div className={styles.lowerSection} style={{width: "20vw", marginRight: "6rem"}}>
