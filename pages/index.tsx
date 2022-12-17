@@ -64,8 +64,8 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             <Grid className={styles.socialIcons} style={{ width: "20vw", marginRight: "6rem", gridTemplateColumns: "auto auto", rowGap: "5em", columnGap: "5em" }}>
               <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
               <SocialIcon fgColor='#000000' bgColor='#ffffff' url="mailto:me@parkalex.dev" network="email" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
-              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
-              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
+              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://matrix.to/#/@openssl_rand:projectsegfau.lt" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
+              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://discord.com/users/1010617504088981644" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
             </Grid>
           </Flex>
 
