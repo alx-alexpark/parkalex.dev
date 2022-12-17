@@ -71,7 +71,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             </Grid>
           </Flex>
 
-          <Flex height="7.5rem" maxWidth="30vw" backgroundColor="white" justifyContent="center" alignItems="center" style={{ marginRight: "10vw", marginLeft: "auto", marginTop: "10em", marginBottom: "7.5em" }}>
+          <Flex height="7.5rem" maxWidth="35vw" backgroundColor="white" justifyContent="center" alignItems="center" style={{ marginRight: "10vw", marginLeft: "auto", marginTop: "10em", marginBottom: "7.5em", padding: "0.5em"}}>
             <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em' }}>$ ls -lah ./blogs/</p>
           </Flex>
 
@@ -80,9 +80,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               <Flex backgroundColor="white" padding="4em" height="20em" flexDirection="row" alignItems="center" justifyContent="space-between" flexGrow="1" key={post.slug}>
                 <Flex flexDirection="column" justifyContent="space-between" flexGrow="1">
                   <Text fontSize="2rem" fontFamily="Jetbrains Mono" >{post.title}</Text>
-                  <Text fontSize="1.2rem" fontFamily="Jetbrains Mono" width="40em">{post.description}</Text>
+                  <Text fontSize="1.2rem" fontFamily="Jetbrains Mono" maxWidth="40em">{post.description}</Text>
                 </Flex>
-                <Button height="10em" width="15em" backgroundColor="black"><Text color="white">Read more!</Text></Button>
+                <Link href={`/posts/${post.slug}`}><Button height="10em" width="15em" backgroundColor="black"><Text color="white" fontFamily="Jetbrains Mono" fontSize="1.5rem" >Read more!</Text></Button></Link>
               </Flex>
             ))}
           </Flex>
