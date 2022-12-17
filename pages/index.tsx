@@ -77,7 +77,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
           <Flex marginLeft="auto" marginRight="auto" backgroundColor="white" maxWidth="80vw" style={{marginBottom: "5em"}} flexDirection="column">
             {posts.map((post) => (
-              <Flex backgroundColor="white" padding="4em" height="20em" flexDirection="row" alignItems="center" justifyContent="space-between" flexGrow="1">
+              <Flex backgroundColor="white" padding="4em" height="20em" flexDirection="row" alignItems="center" justifyContent="space-between" flexGrow="1" key={post.slug}>
                 <Flex flexDirection="column" justifyContent="space-between" flexGrow="1">
                   <Text fontSize="2rem" fontFamily="Jetbrains Mono" >{post.title}</Text>
                   <Text fontSize="1.2rem" fontFamily="Jetbrains Mono" width="40em">{post.description}</Text>
