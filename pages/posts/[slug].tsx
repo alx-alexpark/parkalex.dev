@@ -47,6 +47,7 @@ const PostPage = ({ source, frontMatter, readingTime }: PostPageProps): JSX.Elem
     };
     return (
         <div style={{ backgroundColor: "black" }}>
+            {/* <Head customMeta={customMeta} /> */}
             <Flex width="100vw" height="10vh" backgroundColor="white" justifyContent="center" alignItems="center" fontWeight="bold" fontSize="3em" borderBottom="2px solid black">
                 <Text>{frontMatter.title}</Text>
             </Flex>
