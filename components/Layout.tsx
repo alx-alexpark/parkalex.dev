@@ -27,7 +27,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
         </div>
       </header>
       <main>
-        <div className="mx-auto">{children}</div>
+        <div style={{backgroundColor: "black"}} className="mx-auto">{children}</div>
       </main>
       {/* <footer><Footer /></footer> */}
     </>
