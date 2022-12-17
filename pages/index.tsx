@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, Flex, Grid } from '@chakra-ui/react';
+import { SimpleGrid, Box, Flex, Grid, Button, Text } from '@chakra-ui/react';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
 import styles from '/styles/Index.module.css';
 import useWindowDimensions from '../utils/useWindowDimensions';
-import {SocialIcon} from 'react-social-icons';
+import { SocialIcon } from 'react-social-icons';
 
 type IndexProps = {
   posts: PostType[];
@@ -23,12 +23,12 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   return width >= 600 ? (
     <Layout>
       <div className={styles.indexbody}>
-        <Flex flexDirection="column" style={{padding: '0px', height:'100vh', width:'100vw'}} flexDir="row">
-          <Flex style={{flex: '1', backgroundColor: 'black'}} alignItems="center" justifyContent="end">
-            <h1 className={styles.nameHeaderText} style={{color: 'white', paddingRight: '0.1em'}}>Alex</h1>
+        <Flex flexDirection="column" style={{ padding: '0px', height: '100vh', width: '100vw' }} flexDir="row">
+          <Flex style={{ flex: '1', backgroundColor: 'black' }} alignItems="center" justifyContent="end">
+            <h1 className={styles.nameHeaderText} style={{ color: 'white', paddingRight: '0.1em' }}>Alex</h1>
           </Flex>
-          <Flex style={{flex: '1', backgroundColor: 'white'}} alignItems="center">
-            <h1 className={styles.nameHeaderText} style={{color: 'black', paddingLeft: '0.1em'}}>Park</h1>
+          <Flex style={{ flex: '1', backgroundColor: 'white' }} alignItems="center">
+            <h1 className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>Park</h1>
           </Flex>
 
         </Flex>
@@ -51,25 +51,51 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               </p>
             </article>
           ))} */}
-          
+
+
           <Flex flexDirection="row" justifyContent="center">
-          <div className={styles.lowerSection}>
-            <div className={styles.whoami}>
-              <h3 className={styles.whoamiTextMain}>$ whoami</h3>
-              <p style={{fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em'}}>I am a ...</p>
-              <p className={styles.whoamiTextItem}>※ High schooler</p>
-              <p className={styles.whoamiTextItem}>※ Developer/CS Nerd</p>
-              <p className={styles.whoamiTextItem}>※ Linux Enjoyer</p>
+            <div className={styles.lowerSection}>
+              <div className={styles.whoami}>
+                <h3 className={styles.whoamiTextMain}>$ whoami</h3>
+                <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em' }}>I am a ...</p>
+                <p className={styles.whoamiTextItem}>※ High schooler</p>
+                <p className={styles.whoamiTextItem}>※ Developer/CS Nerd</p>
+                <p className={styles.whoamiTextItem}>※ Linux Enjoyer</p>
+              </div>
             </div>
-          </div>
-          <Grid className={styles.socialIcons} style={{width: "20vw", marginRight: "6rem", gridTemplateColumns: "auto auto", rowGap: "5em", columnGap: "5em"}}>
-            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
-            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="me@parkalex.dev" network="email" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
-            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
-            <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{height: '6em', width: '6em'}}/>
-          </Grid>
-        
+            <Grid className={styles.socialIcons} style={{ width: "20vw", marginRight: "6rem", gridTemplateColumns: "auto auto", rowGap: "5em", columnGap: "5em" }}>
+              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
+              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="me@parkalex.dev" network="email" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
+              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
+              <SocialIcon fgColor='#000000' bgColor='#ffffff' url="https://github.com/alx-alexpark" className={styles.socialButton} style={{ height: '6em', width: '6em' }} />
+            </Grid>
           </Flex>
+
+          <Flex height="7.5rem" maxWidth="30vw" backgroundColor="white" justifyContent="center" alignItems="center" style={{ marginRight: "10vw", marginLeft: "auto", marginTop: "10em", marginBottom: "7.5em" }}>
+            <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '2.5em' }}>$ ls -lah ./blogs/</p>
+          </Flex>
+
+          <Flex marginLeft="auto" marginRight="auto" backgroundColor="white" maxWidth="80vw" style={{marginBottom: "5em"}} flexDirection="column">
+            {posts.map((post) => (
+              <Flex backgroundColor="white" padding="4em" height="20em" flexDirection="row" alignItems="center" justifyContent="space-between" flexGrow="1">
+                <Flex flexDirection="column" justifyContent="space-between" flexGrow="1">
+                  <Text fontSize="2rem" fontFamily="Jetbrains Mono" >{post.title}</Text>
+                  <Text fontSize="1.2rem" fontFamily="Jetbrains Mono" width="40em">{post.description}</Text>
+                </Flex>
+                <Button height="10em" width="15em" backgroundColor="black"><Text color="white">Read more!</Text></Button>
+              </Flex>
+            ))}
+          </Flex>
+
+          <Flex backgroundColor="white" width="100vw" height="7.5vh" justifyContent="start" alignItems="center" paddingLeft="1em">
+          <Text fontFamily="Jetbrains Mono" fontSize="1em">Made with Next.JS | Alexander Park</Text>
+</Flex>
+
+
+
+
+
+
         </div>
       </div>
     </Layout>

@@ -3,6 +3,7 @@ import { MetaProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import { Flex } from '@chakra-ui/react';
 // import ThemeSwitch from './ThemeSwitch';
 
 type LayoutProps = {
