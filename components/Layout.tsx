@@ -11,7 +11,7 @@ type LayoutProps = {
   customMeta?: MetaProps;
 };
 
-export const WEBSITE_HOST_URL = 'https://parkalex.tech';
+export const WEBSITE_HOST_URL = 'https://parkalex.dev';
 
 const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
   return (

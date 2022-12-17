@@ -54,7 +54,7 @@ const PostPage = ({ source, frontMatter, readingTime }: PostPageProps): JSX.Elem
                 <Text fontSize="1.5em">{format(parseISO(frontMatter.date ?? "1111 11, 1111"), 'MMMM dd, yyyy')}</Text>
                 <Text fontSize="1.5em">{readingTime.text}</Text>
             </Flex>
-            <Flex maxWidth="75vw" minHeight="75vh" marginLeft="10em" backgroundColor="white" padding="5em" flexDirection="column" gap="0.75em"><MDXRemote {...source} /></Flex>
+            <Flex maxWidth="75vw" minHeight="67.5vh" marginLeft="10em" backgroundColor="white" padding="5em" flexDirection="column" gap="0.75em"><MDXRemote {...source} /></Flex>
             <Footer />
         </div>
     );
