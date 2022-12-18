@@ -1,9 +1,10 @@
 import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 import Layout from '../components/Layout';
-import styles from '/styles/Project.module.css';
+import styles from '/styles/Projects.module.css';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Project from '../components/Project';
 
 
 
@@ -20,7 +21,15 @@ export const Projects = (): JSX.Element => {
                         <h1 className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>ects</h1>
                     </Flex>
                 </Flex>
-              
+
+                <Flex className={styles.projectsList}>
+                    <Project name="Project Segfault" description="An organization dedicated to increasing privacy on the internet" link="https://projectsegfau.lt"/>
+                    <Project name="Funny-Bunny.Ninja" description="An unused laptop converted into a server, running my own cloud" link="https://crypt.funny-bunny.ninja"/>
+                    <Project name="UnFlash" description="Flashcards that help you remember meaning, not defenition" link="https://devpost.com/software/unflash"/>
+                    <Project name="LongUrl" description="A stupid website I made years ago that makes your links longer, not shorter" link="https://devpost.com/software/unflash"/>
+                    <Project name="SharePlane" description="Uber but for planes, for easy private chartering" link="https://devpost.com/software/planer" />
+                    
+                </Flex>
 
                 <Footer />
             </div>

@@ -34,4 +34,14 @@
     /* appear in front of the white div */
     z-index: 1;
   }
-
+ 
+.projectsList {
+    flex-direction: column;
+    width: 80vw;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
