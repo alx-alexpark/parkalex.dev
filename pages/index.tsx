@@ -78,9 +78,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               <Flex backgroundColor="white" padding="4em" height="20em" flexDirection="row" alignItems="center" justifyContent="space-between" flexGrow="1" key={post.slug}>
                 <Flex flexDirection="column" justifyContent="space-between" flexGrow="1">
                   <Text fontSize="2rem" fontFamily="Jetbrains Mono" >{post.title}</Text>
-                  <Text fontSize="1.2rem" fontFamily="Jetbrains Mono" maxWidth="40em">{post.description}</Text>
+                  <Text fontSize="1.2rem" fontFamily="Jetbrains Mono" maxWidth="40em" marginRight="1em">{post.description}</Text>
                 </Flex>
-                <Link href={`/posts/${post.slug}`}><Button height="10em" width="15em" backgroundColor="black"><Text color="white" fontFamily="Jetbrains Mono" fontSize="1.5rem" >Read more!</Text></Button></Link>
+                <Link href={`/posts/${post.slug}`}><Button height="10em" width="15em" borderRadius="0px" backgroundColor="black"><Text color="white" fontFamily="Jetbrains Mono" fontSize="1.5rem" >Read more!</Text></Button></Link>
               </Flex>
             ))}
           </Flex>
