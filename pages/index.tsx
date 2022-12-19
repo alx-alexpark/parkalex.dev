@@ -20,8 +20,7 @@ type IndexProps = {
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   let isMobile = false;
 
-  if (typeof window !== "undefined") {
-    const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>(1920);
 
     function handleWindowSizeChange() {
       setWidth(window.innerWidth);
@@ -34,7 +33,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
     }, []);
   
     isMobile = width <= 850;
-  }
   // let { height, width } = useWindowDimensions();
   return !isMobile ? (
     <Layout>
