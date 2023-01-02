@@ -22,19 +22,19 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
   const [width, setWidth] = useState<number>(1920);
 
-    function handleWindowSizeChange() {
-      setWidth(window.innerWidth);
-    }
-    useEffect(() => {
-      window.addEventListener("resize", handleWindowSizeChange);
-      return () => {
-        window.removeEventListener("resize", handleWindowSizeChange);
-      };
-    }, []);
-  
-    isMobile = width <= 850;
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  isMobile = width <= 850;
   // let { height, width } = useWindowDimensions();
-  return !isMobile ? (
+  return (
     <Layout>
       <div className={styles.indexbody}>
         <Flex
@@ -107,7 +107,8 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               className={styles.socialIcons}
               style={{
                 width: "20vw",
-                marginRight: "6rem",
+                marginRight: "auto",
+                marginLeft: "auto",
                 gridTemplateColumns: "auto auto",
                 rowGap: "5em",
                 columnGap: "5em",
@@ -229,7 +230,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         </div>
       </div>
     </Layout>
-  ) : <MobileMessage />;
+  );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
