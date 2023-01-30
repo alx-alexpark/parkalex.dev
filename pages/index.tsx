@@ -18,21 +18,7 @@ type IndexProps = {
 };
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
-  let isMobile = false;
-
-  const [width, setWidth] = useState<number>(1920);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  isMobile = width <= 850;
+  
   // let { height, width } = useWindowDimensions();
   return (
     <Layout>
