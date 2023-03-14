@@ -36,6 +36,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   // let { height, width } = useWindowDimensions();
   return (
     <Layout>
+      {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
       <div className={styles.indexbody}>
         <Flex
           flexDirection="column"
@@ -47,23 +48,25 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             alignItems="center"
             justifyContent="end"
           >
-            <h1
+            <Text
+              fontSize={["4.5em", "9em"]}
               className={styles.nameHeaderText}
               style={{ color: "white", paddingRight: "0.1em" }}
             >
               Alex
-            </h1>
+            </Text>
           </Flex>
           <Flex
             style={{ flex: "1", backgroundColor: "white" }}
             alignItems="center"
           >
-            <h1
+            <Text
+              fontSize={["4.5em", "9em"]}
               className={styles.nameHeaderText}
               style={{ color: "black", paddingLeft: "0.1em" }}
             >
               Park
-            </h1>
+            </Text>
           </Flex>
         </Flex>
 
@@ -89,20 +92,21 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           <Flex flexDirection="row" justifyContent="center">
             <div className={styles.lowerSection}>
               <div className={styles.whoami}>
-                <h3 className={styles.whoamiTextMain}>$ whoami</h3>
-                <p
+                <Text fontSize={["2em", "4em"]} className={styles.whoamiTextMain}>$ whoami</Text>
+                <Text
+                fontSize={["1.5em", "2.5em"]}
                   style={{
                     fontFamily: "JetBrains Mono, monospace",
-                    fontSize: "2.5em",
                   }}
                 >
                   I am a ...
-                </p>
-                <p className={styles.whoamiTextItem}>※ High schooler</p>
-                <p className={styles.whoamiTextItem}>※ Developer/CS Nerd</p>
-                <p className={styles.whoamiTextItem}>※ Linux Enjoyer</p>
+                </Text>
+                <Text className={styles.whoamiTextItem}>※ High schooler</Text>
+                <Text className={styles.whoamiTextItem}>※ Developer/CS Nerd</Text>
+                <Text className={styles.whoamiTextItem}>※ Linux Enjoyer</Text>
               </div>
             </div>
+            </Flex>
             <Grid
               className={styles.socialIcons}
               style={{
@@ -144,7 +148,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 style={{ height: "6em", width: "6em" }}
               />
             </Grid>
-          </Flex>
+          
 
           <Flex
             height="7.5rem"

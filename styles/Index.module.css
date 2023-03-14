@@ -122,16 +122,37 @@
   padding-left: 2rem;
   padding-top: 2rem; */
   /* margin-top: 5rem; */
-  margin-right: 2rem;
-  margin-left: 7rem;
+  /* margin-right: 2rem;
+  margin-left: 7rem; */
   margin-top: 5rem;
-  max-width: 45vw;
+  max-width:90vw;
   padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-direction: horizontal;
   align-items: center; 
   background: white;
 }
+
+@media screen and (min-width: 776px) {
+  .lowerSection {
+    width: 100vw;
+    /* padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem; */
+    /* margin-top: 5rem; */
+    margin-right: 2rem;
+    margin-left: 7rem;
+    margin-top: 5rem;
+    max-width: 45vw;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center; 
+    background: white;
+  }
+}
+
+
 
 .socialIcons {
   /* padding-right: 2rem;
@@ -147,6 +168,22 @@
   flex-direction: horizontal;
   align-items: center; 
 }
+
+@media screen and (min-width: 776px) {
+  .socialIcons {
+    /* padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem; */
+    /* margin-top: 5rem; */
+    margin-top: 5rem;
+    max-width: 45vw;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center; 
+  }
+}
+
 
 .whoamiTextMain {
   font-size: 4em;
