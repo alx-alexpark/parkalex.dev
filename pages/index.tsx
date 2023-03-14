@@ -24,6 +24,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
+    isMobile = width <= 776;
   }
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
@@ -32,11 +33,11 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
     };
   }, []);
 
-  isMobile = width <= 850;
+  isMobile = width <= 776;
   // let { height, width } = useWindowDimensions();
   return (
     <Layout>
-      {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className={styles.indexbody}>
         <Flex
           flexDirection="column"
@@ -89,7 +90,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             </article>
           ))} */}
 
-          <Flex flexDirection="row" justifyContent="center">
+          <Flex flexDirection={["column", "row"]} justifyContent="center" alignItems='center'>
             <div className={styles.lowerSection}>
               <div className={styles.whoami}>
                 <Text fontSize={["2em", "4em"]} className={styles.whoamiTextMain}>$ whoami</Text>
@@ -106,17 +107,17 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 <Text className={styles.whoamiTextItem}>※ Linux Enjoyer</Text>
               </div>
             </div>
-            </Flex>
+            
             <Grid
               className={styles.socialIcons}
               style={{
-                width: "20vw",
                 marginRight: "auto",
                 marginLeft: "auto",
                 gridTemplateColumns: "auto auto",
                 rowGap: "5em",
                 columnGap: "5em",
               }}
+              minWidth={["85vw", "20vw"]}
             >
               <SocialIcon
                 fgColor="#000000"
@@ -148,30 +149,31 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 style={{ height: "6em", width: "6em" }}
               />
             </Grid>
+            </Flex>
           
 
           <Flex
             height="7.5rem"
-            maxWidth="35vw"
+            maxWidth={["85vw", "35vw"]}
             backgroundColor="white"
             justifyContent="center"
             alignItems="center"
+            marginRight={["auto", "10em"]}
             style={{
-              marginRight: "10vw",
               marginLeft: "auto",
-              marginTop: "10em",
+              marginTop: "5em",
               marginBottom: "7.5em",
               padding: "0.5em",
             }}
           >
-            <p
+            <Text
               style={{
                 fontFamily: "JetBrains Mono, monospace",
-                fontSize: "2.5em",
               }}
+              fontSize={["1.5em", "2.5em"]}
             >
               $ ls -lah ./blogs/
-            </p>
+            </Text>
           </Flex>
 
           <Flex
@@ -185,9 +187,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             {posts.map((post) => (
               <Flex
                 backgroundColor="white"
-                padding="4em"
+                padding={["2.5em", "4em"]}
                 height="20em"
-                flexDirection="row"
+                flexDirection={["column", "row"]}
                 alignItems="center"
                 justifyContent="space-between"
                 flexGrow="1"
@@ -198,8 +200,8 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                   justifyContent="space-between"
                   flexGrow="1"
                 >
-                  <Text fontSize="2rem" fontFamily="Jetbrains Mono">
-                    {post.title}
+                  <Text fontSize={["1.6rem", "2rem"]} fontFamily="Jetbrains Mono" fontWeight="bold">
+                   <Link href={`/posts/${post.slug}`}><u>{post.title}</u></Link>
                   </Text>
                   <Text
                     fontSize="1.2rem"
@@ -210,22 +212,25 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                     {post.description}
                   </Text>
                 </Flex>
+                {isMobile ? <></> : 
                 <Link href={`/posts/${post.slug}`}>
                   <Button
+                    display={["none", "unset"]}
                     height="10em"
                     width="15em"
                     borderRadius="0px"
                     backgroundColor="black"
                   >
                     <Text
+                      display={["none", "unset"]}
                       color="white"
                       fontFamily="Jetbrains Mono"
                       fontSize="1.5rem"
                     >
                       Read more!
                     </Text>
-                  </Button>
-                </Link>
+                  </Button> 
+                </Link> }
               </Flex>
             ))}
           </Flex>

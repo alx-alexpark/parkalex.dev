@@ -116,35 +116,21 @@
   color: black;
 }
 
-.lowerSection {
-  width: 100vw;
-  /* padding-right: 2rem;
-  padding-left: 2rem;
-  padding-top: 2rem; */
-  /* margin-top: 5rem; */
-  /* margin-right: 2rem;
-  margin-left: 7rem; */
-  margin-top: 5rem;
-  max-width:90vw;
-  padding: 0 1rem 1rem 1rem;
-  display: flex;
-  flex-direction: horizontal;
-  align-items: center; 
-  background: white;
-}
 
-@media screen and (min-width: 776px) {
+@media screen and (max-width: 776px) {
   .lowerSection {
     width: 100vw;
     /* padding-right: 2rem;
     padding-left: 2rem;
     padding-top: 2rem; */
     /* margin-top: 5rem; */
-    margin-right: 2rem;
-    margin-left: 7rem;
+
     margin-top: 5rem;
-    max-width: 45vw;
-    padding: 0 1rem 1rem 1rem;
+    max-width: 85vw;
+    min-width: 70vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: horizontal;
     align-items: center; 
@@ -152,7 +138,38 @@
   }
 }
 
+@media screen and (min-width: 777px) {
+.lowerSection {
+  width: 100vw;
+  /* padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem; */
+   margin-top: 5rem; 
+   margin-right: 2rem;
+  margin-left: 7rem; 
+  margin-top: 5rem;
+  max-width:45vw;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center; 
+  background: white;
+}
+}
 
+@media screen and (max-width: 776px) {
+  .socialIcons {
+    /* padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem; */
+    /* margin-top: 5rem; */
+    margin-top: 10rem;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center; 
+  }
+}
 
 .socialIcons {
   /* padding-right: 2rem;
@@ -169,20 +186,7 @@
   align-items: center; 
 }
 
-@media screen and (min-width: 776px) {
-  .socialIcons {
-    /* padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 2rem; */
-    /* margin-top: 5rem; */
-    margin-top: 5rem;
-    max-width: 45vw;
-    padding: 0 1rem 1rem 1rem;
-    display: flex;
-    flex-direction: horizontal;
-    align-items: center; 
-  }
-}
+
 
 
 .whoamiTextMain {
