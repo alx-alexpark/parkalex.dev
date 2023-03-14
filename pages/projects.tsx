@@ -24,9 +24,9 @@ export const Projects = (): JSX.Element => {
 
                 <Flex className={styles.projectsList}>
                     <Project name="Project Segfault" description="An organization dedicated to increasing privacy on the internet" link="https://projectsegfau.lt"/>
-                    <Project name="Funny-Bunny.Ninja" description="An unused laptop converted into a server, running my own cloud" link="https://crypt.funny-bunny.ninja"/>
+                    <Project name="Funny-Bunny.Ninja" description="A used Dell Poweredge r720 being repurposed to run my own cloud." link="https://crypt.funny-bunny.ninja"/>
                     <Project name="UnFlash" description="Flashcards that help you remember meaning, not defenition" link="https://devpost.com/software/unflash"/>
-                    <Project name="LongUrl" description="A stupid website I made years ago that makes your links longer, not shorter" link="https://devpost.com/software/unflash"/>
+                    <Project name="LongUrl" description="A stupid website I made years ago that makes your links longer, not shorter" link="https://longurl.bernygg.repl.co"/>
                     <Project name="SharePlane" description="Uber but for planes, for easy private chartering" link="https://devpost.com/software/planer" />
                     
                 </Flex>

@@ -21,7 +21,7 @@ export const Contact = (): JSX.Element => {
                         <Text fontSize={["3em", "9em"]} className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>act Me</Text>
                     </Flex>
                 </Flex>
-                <Flex width={["95vw", "80vw"]} className={styles.contactBody} flexDir="column" gap="1em">
+                <Flex width={["90vw", "80vw"]} className={styles.contactBody} flexDir="column" gap="1em">
                     <Text fontSize={["2em", "2.5em"]}>$ man contact</Text>
                     <Text>If you find yourself needing to contact me, then you are at the right place.</Text>
                     <Text>If you want a fast response, and want to use a platform which respects your privacy, contact me through <Link href="https://matrix.to/#/@openssl_rand:projectsegfau.lt"><u>Matrix</u></Link>.</Text>
