@@ -14,11 +14,11 @@ export const Projects = (): JSX.Element => {
         <Layout>
             <div>
                 <Flex flexDirection="column" style={{ padding: '0px', height: '100vh', width: '100vw' }} flexDir="row">
-                    <Flex style={{ flex: '1', backgroundColor: 'black' }} alignItems="center" justifyContent="end">
-                        <h1 className={styles.nameHeaderText} style={{ color: 'white', paddingRight: '0.1em' }}>Proj</h1>
+                    <Flex fontSize={["4em", "9em"]} style={{ flex: '1', backgroundColor: 'black' }} alignItems="center" justifyContent="end">
+                        <Text className={styles.nameHeaderText} style={{ color: 'white', paddingRight: '0.1em' }}>Proj</Text>
                     </Flex>
-                    <Flex style={{ flex: '1', backgroundColor: 'white' }} alignItems="center">
-                        <h1 className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>ects</h1>
+                    <Flex fontSize={["4em", "9em"]} style={{ flex: '1', backgroundColor: 'white' }} alignItems="center">
+                        <Text className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>ects</Text>
                     </Flex>
                 </Flex>
 

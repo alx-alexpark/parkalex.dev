@@ -12,16 +12,11 @@ type ProjectProps = {
 const Project = ({ name, link, description }: ProjectProps): JSX.Element => {
     return (
         <nav>
-            <Flex width="80vw" maxHeight="12.5vh" flexDir="row" padding="1em" justifyContent="space-between" alignItems='center' overflow="auto">
+            <Flex width="80vw" minHeight="12.5vh" flexDir={["column", "row"]} padding="1em" justifyContent={["center", "space-between"]} alignItems={["start",'center']} flexGrow="1" overflow="auto">
                 {/* <Image src={image} alt="Project image" width="75" height="75"/> */}
-                <Text fontSize="1.75rem" paddingRight="1.5em">{name}</Text>
+                <Link href={link}><u><Text fontSize="1.75rem" paddingRight="1em" paddingLeft={["0em", "1.5em"]} fontWeight="bold">{name}</Text></u></Link>
                 <Flex flexDir='row' justifyContent="end" alignItems="center" flexGrow='1'>
-                <Text marginRight="2em" textAlign="right">{description}</Text>
-                <Link href={link}>
-                    <Flex backgroundColor="black" height="3.5em" width="10em" alignItems="center" justifyContent="center">
-                        <Text textColor="white">Visit!</Text>
-                    </Flex>
-                </Link>
+                <Text marginRight={["2em", "3em"]} textAlign={["left", "right"]}>{description}</Text>
                 </Flex>
             </Flex>
         </nav>

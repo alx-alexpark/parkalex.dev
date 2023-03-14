@@ -48,14 +48,14 @@ const PostPage = ({ source, frontMatter, readingTime }: PostPageProps): JSX.Elem
     return (
         <div style={{ backgroundColor: "black" }}>
             {/* <Head customMeta={customMeta} /> */}
-            <Flex width="100vw" height="10vh" backgroundColor="white" justifyContent="center" alignItems="center" fontWeight="bold" fontSize="3em" borderBottom="2px solid black">
+            <Flex width="100vw" height="10vh" backgroundColor="white" justifyContent="center" alignItems="center" fontWeight="bold" fontSize={["1.5em", "3em"]} borderBottom="2px solid black">
                 <Text>{frontMatter.title}</Text>
             </Flex>
             <Flex width="100vw" height="5vh" justifyContent="space-around" alignItems="center" backgroundColor="white" marginBottom="2.5em">
-                <Text fontSize="1.5em">{format(parseISO(frontMatter.date ?? "1111 11, 1111"), 'MMMM dd, yyyy')}</Text>
-                <Text fontSize="1.5em">{readingTime.text}</Text>
+                <Text fontSize={["1.2em", "1.5em"]}>{format(parseISO(frontMatter.date ?? "1111 11, 1111"), 'MMMM dd, yyyy')}</Text>
+                <Text fontSize={["1.2em", "1.5em"]}>{readingTime.text}</Text>
             </Flex>
-            <Flex maxWidth="65vw" minHeight="67.5vh" marginLeft="auto" marginRight="auto" backgroundColor="white" padding="5em" flexDirection="column" gap="0.75em" fontSize="1.15em"><MDXRemote {...source} /></Flex>
+            <Flex maxWidth={["95vw", "65vw"]} minHeight="67.5vh" marginLeft="auto" marginRight="auto" backgroundColor="white" padding={["1.2em", "5em"]} flexDirection="column" gap={["1.2em", "0.75em"]} fontSize="1.15em"><MDXRemote {...source} /></Flex>
             <Footer />
         </div>
     );
