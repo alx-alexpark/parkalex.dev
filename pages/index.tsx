@@ -11,7 +11,6 @@ import styles from "/styles/Index.module.css";
 import useWindowDimensions from "../utils/useWindowDimensions";
 import { SocialIcon } from "react-social-icons";
 import Footer from "../components/Footer";
-import MobileMessage from "../components/Mobile";
 
 type IndexProps = {
   posts: PostType[];

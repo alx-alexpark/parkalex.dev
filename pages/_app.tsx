@@ -1,7 +1,6 @@
 import { ChakraProvider, extendTheme, ThemeProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import React, { useEffect, useState } from 'react';
-import MobileMessage from '../components/Mobile';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
@@ -23,7 +22,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
       <Component {...pageProps} />
       </ThemeProvider>
     </ChakraProvider>
-  ) : <ChakraProvider><MobileMessage/></ChakraProvider>;
+  );
 };
 
 export default MyApp;
