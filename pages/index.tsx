@@ -114,7 +114,8 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 rowGap: "5em",
                 columnGap: "5em",
               }}
-              minWidth={["10vw", "20vw"]}
+              overflowX="hidden"
+              minWidth={["10vw", "10vw"]}
               marginLeft={["auto", "7rem"]}
               marginRight={["auto", "2rem"]}
             >
