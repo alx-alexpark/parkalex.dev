@@ -27,8 +27,8 @@ import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 // to handle import statements. Instead, you must include components in scope
 // here.
 const components = {
-    h1: (props: any) => <Text fontWeight="bold" fontSize="2.25em">{props.children}</Text>,
-    h2: (props: any) => <Text fontWeight="bold" fontSize="1.75em">{props.children}</Text>,
+    h1: (props: any) => <Text fontWeight="bold" fontSize="2em">{props.children}</Text>,
+    h2: (props: any) => <Text fontWeight="bold" fontSize="1.5em">{props.children}</Text>,
     br: () => <br />,
     em: (props: any) => <em>{props.children}</em>,
     // p: (props: any) => <Text>{props.children}</Text>,
