@@ -164,7 +164,7 @@
     padding-top: 2rem; */
     /* margin-top: 5rem; */
     margin-top: 10rem;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: horizontal;
     align-items: center; 
@@ -179,7 +179,6 @@
   margin-right: 2rem;
   margin-left: 7rem;
   margin-top: 5rem;
-  max-width: 45vw;
   padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-direction: horizontal;

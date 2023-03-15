@@ -110,13 +110,13 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             <Grid
               className={styles.socialIcons}
               style={{
-                marginRight: "auto",
-                marginLeft: "auto",
                 gridTemplateColumns: "auto auto",
                 rowGap: "5em",
                 columnGap: "5em",
               }}
-              minWidth={["85vw", "20vw"]}
+              minWidth={["10vw", "20vw"]}
+              marginLeft={["auto", "7rem"]}
+              marginRight={["auto", "2rem"]}
             >
               <SocialIcon
                 fgColor="#000000"
@@ -180,14 +180,13 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             marginRight="auto"
             backgroundColor="white"
             maxWidth="80vw"
-            style={{ marginBottom: "5em" }}
+            style={{ marginBottom: "7em" }}
             flexDirection="column"
           >
             {posts.map((post) => (
               <Flex
                 backgroundColor="white"
-                padding={["2.5em", "4em"]}
-                height="20em"
+                padding={["2em", "4em"]}
                 flexDirection={["column", "row"]}
                 alignItems="center"
                 justifyContent="space-between"
@@ -196,7 +195,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               >
                 <Flex
                   flexDirection="column"
-                  justifyContent="space-between"
+                  justifyContent="start"
                   flexGrow="1"
                 >
                   <Text fontSize={["1.6rem", "2rem"]} fontFamily="Jetbrains Mono" fontWeight="bold">
