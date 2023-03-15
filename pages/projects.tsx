@@ -14,19 +14,19 @@ export const Projects = (): JSX.Element => {
         <Layout>
             <div>
                 <Flex flexDirection="column" style={{ padding: '0px', height: '100vh', width: '100vw' }} flexDir="row">
-                    <Flex style={{ flex: '1', backgroundColor: 'black' }} alignItems="center" justifyContent="end">
-                        <h1 className={styles.nameHeaderText} style={{ color: 'white', paddingRight: '0.1em' }}>Proj</h1>
+                    <Flex fontSize={["4em", "9em"]} style={{ flex: '1', backgroundColor: 'black' }} alignItems="center" justifyContent="end">
+                        <Text className={styles.nameHeaderText} style={{ color: 'white', paddingRight: '0.1em' }}>Proj</Text>
                     </Flex>
-                    <Flex style={{ flex: '1', backgroundColor: 'white' }} alignItems="center">
-                        <h1 className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>ects</h1>
+                    <Flex fontSize={["4em", "9em"]} style={{ flex: '1', backgroundColor: 'white' }} alignItems="center">
+                        <Text className={styles.nameHeaderText} style={{ color: 'black', paddingLeft: '0.1em' }}>ects</Text>
                     </Flex>
                 </Flex>
 
                 <Flex className={styles.projectsList}>
                     <Project name="Project Segfault" description="An organization dedicated to increasing privacy on the internet" link="https://projectsegfau.lt"/>
-                    <Project name="Funny-Bunny.Ninja" description="An unused laptop converted into a server, running my own cloud" link="https://crypt.funny-bunny.ninja"/>
+                    <Project name="Funny-Bunny.Ninja" description="A used Dell Poweredge r720 being repurposed to run my own cloud." link="https://crypt.funny-bunny.ninja"/>
                     <Project name="UnFlash" description="Flashcards that help you remember meaning, not defenition" link="https://devpost.com/software/unflash"/>
-                    <Project name="LongUrl" description="A stupid website I made years ago that makes your links longer, not shorter" link="https://devpost.com/software/unflash"/>
+                    <Project name="LongUrl" description="A stupid website I made years ago that makes your links longer, not shorter" link="https://longurl.bernygg.repl.co"/>
                     <Project name="SharePlane" description="Uber but for planes, for easy private chartering" link="https://devpost.com/software/planer" />
                     
                 </Flex>

@@ -8,7 +8,7 @@ export const WEBSITE_HOST_URL = 'https://parkalex.tech';
 const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
   const router = useRouter();
   const meta: MetaProps = {
-    title: 'Alex Park - Website',
+    title: 'Alex Park',
     description: 'My personal website!',
     type: 'website',
     ...customMeta,
