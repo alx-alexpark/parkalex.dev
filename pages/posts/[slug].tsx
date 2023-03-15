@@ -9,6 +9,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
+import { ReactComponentElement, ReactElement, ReactNode } from 'react';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
@@ -26,9 +27,19 @@ import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 // to handle import statements. Instead, you must include components in scope
 // here.
 const components = {
-    Head,
-    Image,
-    Link,
+    h1: (props: any) => <Text fontWeight="bold" fontSize="2.25em">{props.children}</Text>,
+    h2: (props: any) => <Text fontWeight="bold" fontSize="1.75em">{props.children}</Text>,
+    br: () => <br />,
+    em: (props: any) => <em>{props.children}</em>,
+    // p: (props: any) => <Text>{props.children}</Text>,
+    // ul: (props: any) => <ul>{props.children}</ul>,
+    // blockquote: (props: any) => <Text as="blockquote">{props.children}</Text>,
+    // code: (props: any) => <Text as="code">{props.children}</Text>,
+    u: (props: any) => <u>{props.children}</u>,
+    strong: (props: any) => <strong>{props.children}</strong>,
+    hr: () => <hr />,
+    // img: (props: any) => <Image layout="responsive" src={props.src} alt={props.alt} />,
+    a: (props: any) => <Link href={props.href}><u>{props.children}</u></Link>
 };
 
 type PostPageProps = {
@@ -55,7 +66,7 @@ const PostPage = ({ source, frontMatter, readingTime }: PostPageProps): JSX.Elem
                 <Text fontSize={["1.2em", "1.5em"]}>{format(parseISO(frontMatter.date ?? "1111 11, 1111"), 'MMMM dd, yyyy')}</Text>
                 <Text fontSize={["1.2em", "1.5em"]}>{readingTime.text}</Text>
             </Flex>
-            <Flex maxWidth={["95vw", "65vw"]} minHeight="67.5vh" marginLeft="auto" marginRight="auto" backgroundColor="white" padding={["1.2em", "5em"]} flexDirection="column" gap={["1.2em", "0.75em"]} fontSize="1.15em"><MDXRemote {...source} /></Flex>
+            <Flex maxWidth={["95vw", "65vw"]} minHeight="67.5vh" marginLeft="auto" marginRight="auto" backgroundColor="white" padding={["1.2em", "5em"]} flexDirection="column" gap={["1.2em", "0.75em"]} fontSize="1.15em"><MDXRemote {...source} components={components}/></Flex>
             <Footer />
         </div>
     );
