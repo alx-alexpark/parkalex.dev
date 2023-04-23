@@ -26,13 +26,11 @@ export const Contact = (): JSX.Element => {
                     <Text>If you find yourself needing to contact me, then you are at the right place.</Text>
                     <Text>If you want a fast response, and want to use a platform which respects your privacy, contact me through <Link href="https://matrix.to/#/@openssl_rand:projectsegfau.lt"><u>Matrix</u></Link>.</Text>
 
-                    <Text>If you must contact me through an insecure medium (e.g. Discord, Email), please encrypt your messages using my GPG key. </Text>
+                    <Text>You should use strong encryption when contacting me!</Text>
 
-                    <Text>My key has the fingerprint 24A3B83FB26AA900</Text>
-
-                    <code> $ gpg --keyserver keyserver.ubuntu.com --recv-keys 24a3b83fb26aa900 </code>
-
-                    <Text>For maximum security, verify key integrity over multiple keyservers</Text>
+                    <Text>My PGP key has the fingerprint 24A3B83FB26AA900</Text>
+                    
+                    <Text>I can also cryptographically verify my identity, check out <Link href="https://keyoxide.org/me%40parkalex.dev"><u>Keyoxide</u></Link></Text>
 
                     <Text>Email: <Link href="mailto:me@parkalex.dev"><u>me@parkalex.dev</u></Link></Text>
 
