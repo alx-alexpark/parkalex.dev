@@ -211,3 +211,7 @@
       transform:rotate(360deg);
   }
 }
+
+.indexbody {
+  overflow-x: hidden;
+}
