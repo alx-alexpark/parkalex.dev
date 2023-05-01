@@ -9,7 +9,7 @@ import { getAllPosts } from "../lib/api";
 import { PostType } from "../types/post";
 import styles from "/styles/Index.module.css";
 import useWindowDimensions from "../utils/useWindowDimensions";
-import { SocialIcon } from "react-social-icons";
+import { SocialIcon } from "react-social-icons-matrix";
 import Footer from "../components/Footer";
 
 type IndexProps = {
@@ -114,7 +114,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 rowGap: "5em",
                 columnGap: "5em",
               }}
-              overflowX="hidden"
               minWidth={["10vw", "10vw"]}
               marginLeft={["auto", "7rem"]}
               marginRight={["auto", "2rem"]}
@@ -140,13 +139,15 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 url="https://matrix.to/#/@openssl_rand:projectsegfau.lt"
                 className={styles.socialButton}
                 style={{ height: "6em", width: "6em" }}
+                network="matrix"
               />
               <SocialIcon
                 fgColor="#000000"
                 bgColor="#ffffff"
-                url="https://discord.com/users/1010617504088981644"
+                url="https://spyware.neocities.org/articles/discord"
                 className={styles.socialButton}
                 style={{ height: "6em", width: "6em" }}
+                network="discord"
               />
             </Grid>
             </Flex>
