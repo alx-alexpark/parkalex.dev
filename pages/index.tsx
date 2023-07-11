@@ -149,6 +149,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                 style={{ height: "6em", width: "6em" }}
                 network="discord"
               />
+              <a style={{display: 'none'}} rel="me" href="https://social.dino.icu/@alexp">Mastodon</a>
             </Grid>
             </Flex>
           
