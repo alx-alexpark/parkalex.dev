@@ -136,7 +136,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               <SocialIcon
                 fgColor="#000000"
                 bgColor="#ffffff"
-                url="https://matrix.to/#/@openssl_rand:projectsegfau.lt"
+                url="https://matrix.to/#/@devrand:envs.net"
                 className={styles.socialButton}
                 style={{ height: "6em", width: "6em" }}
                 network="matrix"
