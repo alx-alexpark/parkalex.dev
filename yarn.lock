@@ -4507,10 +4507,10 @@ react-remove-scroll@^2.5.5:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
-react-social-icons-matrix@^5.16.3:
-  version "5.16.3"
-  resolved "https://registry.yarnpkg.com/react-social-icons-matrix/-/react-social-icons-matrix-5.16.3.tgz#af5881e79b65de3f57dd0ab464b14681cf9dc6e1"
-  integrity sha512-AxLMXf2fwb19f+JfchuTP/CM1nszJ1hgGZT1Tsui69fGYhxmGUnnjcjluuPXxaaiporkdJrTAhtV9p2vrawxlQ==
+react-social-icons-matrix@^5.16.5:
+  version "5.16.5"
+  resolved "https://registry.yarnpkg.com/react-social-icons-matrix/-/react-social-icons-matrix-5.16.5.tgz#bd578a6fba16b88b4ef5bacbfb899ba1f72952f6"
+  integrity sha512-BtUOMr2KIGgY5+FfjN0+9SDfdobIa6Kjy2UC/qbF+lCdV/DISJwhWFfNvIJdo4Jqsh35MC2BRc217gUCByETIw==
   dependencies:
     prop-types "^15.7.2"
 
