@@ -22,7 +22,7 @@
     "eslint": "8.27.0",
     "eslint-config-next": "13.4.13",
     "framer-motion": "^10.12.8",
-    "glob": "^8.0.3",
+    "glob": "^10.3.10",
     "gray-matter": "^4.0.3",
     "json5": "2.2.3",
     "mdx-prism": "^0.3.3",
